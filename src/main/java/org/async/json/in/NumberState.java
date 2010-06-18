@@ -30,7 +30,7 @@ public class NumberState implements State {
 				try {
 					Number result = parseNumber(string);
 					callback.number(result);
-				} catch (Exception e) {
+				} catch (NumberFormatException e) {
 					throw new ParseException(reader.getLine(), reader
 							.getSymbol(), "Unmatched input '" + string + "'");
 
